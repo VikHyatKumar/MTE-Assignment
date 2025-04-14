@@ -10,15 +10,7 @@ int lengthOfLongestSubstring(string s) {
     for (int right = 0; right < s.length(); ++right) {
         char ch = s[right];
 
-        if (lastIndex.find(ch) != lastIndex.end() && lastIndex[ch] >= left) {
-            left = lastIndex[ch] + 1;
-        }
-
-        lastIndex[ch] = right;
-        maxLen = max(maxLen, right - left + 1);
-    }
-
-    return maxLen;
+        if (lastIndex.f
 }
 
 int main() {
