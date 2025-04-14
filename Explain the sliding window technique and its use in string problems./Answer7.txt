@@ -1,0 +1,4 @@
+It’s a way to move through a subset (window) of elements in a linear structure (like arrays or strings),
+adjusting the start and end of the window dynamically based on the problem's constraints.
+
+We use it because it avoids unnecessary repeated work and turns an O(n²) brute-force approach into an O(n) efficient one.
