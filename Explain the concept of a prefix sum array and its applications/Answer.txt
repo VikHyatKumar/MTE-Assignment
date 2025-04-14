@@ -1,0 +1,7 @@
+A prefix sum array is a data structure that allows for efficient computation of the sum of elements in a subarray.
+
+Applications:-
+Range Sum Queries
+Finding Equilibrium Index
+Sliding Window Problems
+2D Prefix Sum
