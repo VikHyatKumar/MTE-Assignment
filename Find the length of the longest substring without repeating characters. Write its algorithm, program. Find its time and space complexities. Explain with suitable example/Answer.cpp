@@ -4,17 +4,17 @@
 using namespace std;
 
 int lengthOfLongestSubstring(string s) {
-    unordered_map<char, int> lastSeen;
+    unordered_map<char, int> lastIndex;
     int maxLen = 0, left = 0;
 
     for (int right = 0; right < s.length(); ++right) {
         char ch = s[right];
 
-        if (lastSeen.find(ch) != lastSeen.end() && lastSeen[ch] >= left) {
-            left = lastSeen[ch] + 1;
+        if (lastIndex.find(ch) != lastIndex.end() && lastIndex[ch] >= left) {
+            left = lastIndex[ch] + 1;
         }
 
-        lastSeen[ch] = right;
+        lastIndex[ch] = right;
         maxLen = max(maxLen, right - left + 1);
     }
 
@@ -42,13 +42,8 @@ Algorithm:
 4. Return maxLength.
 
 Time Complexity:
-- O(n), where n is the length of the string. Each character is processed at most twice (once for adding to the map and once for updating the start index).
+- O(n)
 
 Space Complexity:
-- O(min(n, a)), where n is the length of the string and a is the size of the character set (e.g., 26 for lowercase English letters).
-
-Example:
-Input: "abcabcbb"
-Output: 3
-Explanation: The longest substring without repeating characters is "abc", with a length of 3.
+- O(min(n, a))
 */
