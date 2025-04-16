@@ -50,3 +50,6 @@ int main() {
     else
         cout << intersectionPoint->data << endl;
 }
+
+//Time Complexity: O(N^2)
+//Space Complexity: O(1)
